@@ -1,0 +1,320 @@
+<style>
+    .center_div {
+        margin: 0 auto;
+        width: 70%
+            /* value of your choice which suits your alignment */
+    }
+
+    .padding {
+        padding-top: 40px;
+        margin: auto;
+    }
+
+    .table_border tr td {
+        text-align: center;
+    }
+
+    .lot_table tr th {
+        background-color: #cdcdd4;
+    }
+
+    .lot_table {
+        margin-top: 40px;
+    }
+
+    .add_image {
+        background-image: url('assets/images/purchase_quick_blue_logo.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 250px;
+        height: 70px;
+        margin-left: 25px;
+    }
+
+    .add_image_jcb {
+        background-image: url('assets/Login/images/PQ_JCB.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 250px;
+        height: 70px;
+        margin-left: 25px;
+    }
+</style>
+
+
+<body style="overflow-x:hidden;">
+    <!-- <div class="preloader" *ngIf="Loader">
+        <div class="loading">
+            <div class="lds-ripple">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div> -->
+    <div class="wrapper">
+        <div class="content-wrapper">
+            <div class="main-content">
+                <div id="content">
+                    <!-- <section class="blue-section">
+                        <h3 class="page-title">Supplier Accept/Reject Report</h3>
+                    </section> -->
+                    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+                    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+                    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                    <!------ Include the above in your HEAD tag ---------->
+                    
+                    <!DOCTYPE html>
+                  
+                            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+                            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+                            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+                        <!--Coded With Love By Mutiullah Samim-->
+                            <div class="container-fluid h-100">
+                                <div class="row justify-content-center h-100">
+                                    <div class="col-md-4 col-xl-3 chat"><div class="card mb-sm-3 mb-md-0 contacts_card">
+                                        <div class="card-header">
+                                            <div class="input-group" style="width: 12pc;">
+                                                <input type="text" placeholder="Search..."  (keyup)="search($event)" name="" class="form-control search">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text search_btn" ><i class="fas fa-search"></i></span>
+                                                </div>
+                                            </div>
+                                            <button (click)="CreateForm(1)" value="Add Contact">Add Contact</button>
+                                              
+                                            
+                                        </div>
+                                        <div class="card-body contacts_body">
+                                            <ul class="contacts">
+                                                <li class="active" *ngFor="let user of all_user;let i = index"> 
+
+                                                   
+
+                                                <div class="d-flex bd-highlight" (click)="get_user_by_id(user.id,1)" style=" cursor: pointer;"> 
+                                                    <div class="img_cont">
+                                                        <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img">
+                                                        <span class="online_icon"></span>
+                                                    </div>
+                                                    <div class="user_info" >
+                                                        <span>{{user.user_name}}</span>
+                                                        <p>{{user.company_name}}</p>
+                                                    </div>
+                                                </div>
+
+                                                <a (click)="edit_question(user.id)" style="margin-left: 15pc; ">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </a>
+                                                <a class="ml-2" (click)="delete_question(user.id)">
+                                                    <span class="fas fa-trash-alt delete_icon"></span>
+                                                </a> 
+                                            </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer"></div>
+                                    </div></div>
+                                    <div class="col-md-8 col-xl-6 chat">
+                                      
+                                        <div class="card" *ngIf="create_contact">
+                                            <br>
+                                            <br>
+                                            <div class="col-12">
+                                                <h5>Add New Contact</h5>
+                                                <form name="buyerLogin" id="buyerLogin" [formGroup]="formGroup"   (validSubmit)="create_user()" autocomplete="off">
+                                                    <div class="row icon-font form-group mt-2">
+                                                        <div class="col-4">
+                                                            <h6>Full Name : </h6>
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <div class="form-group">
+                                                                <input type="text" name="user_name" formControlName="user_name"  class="form-control" placeholder="Enter Full Name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row icon-font form-group mt-2">
+                                                        <div class="col-4">
+                                                            <h6>Email : </h6>
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <div class="form-group">
+                                                                <input type="text" formControlName="user_email" name="user_email" class="form-control" placeholder="Enter Email">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row icon-font form-group mt-2">
+                                                        <div class="col-4">
+                                                            <h6>Phone : </h6>
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <div class="form-group">
+                                                                <input type="text" formControlName="phone" name="phone" class="form-control" placeholder="Enter Phone Number">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row icon-font form-group mt-2">
+                                                        <div class="col-4">
+                                                            <h6>Company Name : </h6>
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <div class="form-group">
+                                                                <input type="text" formControlName="user_company_name" name="user_company_name"  class="form-control" placeholder="Enter Company Name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row icon-font form-group mt-2">
+                                                        <div class="col-4">
+                                                            <h6>Address : </h6>
+                                                        </div>
+                                                        <div class="col-8" style="word-break: break-word;">
+                                                            <div class="form-group">
+                                                                <textarea class="form-control" formControlName="user_address" name="user_address"  id="exampleFormControlTextarea1" rows="2"
+                                                                    placeholder="Enter Address"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+            
+                                                 
+                                                    <div class="row justify-content-end">
+            
+                                                        <button *ngIf="!edituser" (validSubmit)="create_user()" type="submit" class="btn save_btn" style="margin-right: 20px;">
+                                                            Save
+                                                        </button>
+
+                                                        <button *ngIf="edituser" (validSubmit)="create_user()" type="submit" class="btn save_btn" style="margin-right: 20px;">
+                                                            Update
+                                                        </button>
+
+                                                        <button type="button" class="btn cancel_btn" style="margin-right: 15px;" 
+                                                        (click)="cancel_input()">
+                                                            Cancel
+                                                        </button>
+            
+                                                      
+                                                    </div>
+                                                    </form>
+                                            </div>
+                                        </div>
+                                        <div class="card" *ngIf="!create_contact">
+                                            <div class="card-header msg_head">
+                                                <div class="d-flex bd-highlight">
+                                                    <div class="img_cont">
+                                                        <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img">
+                                                        <span class="online_icon"></span>
+                                                    </div>
+                                                    <div class="user_info">
+                                                        <span>{{selected_user_name}}</span>
+                                                    </div>
+                                                </div>
+                                          
+                                            </div>
+                                            <div class="card-body msg_card_body">
+                                                <h4 style="margin-left: 14pc;">Contact Information</h4>
+                                                <br>
+                                                <br>
+                                                <div class="col-6" style="margin-left: 5pc;">
+                                                    <div class="row icon-font form-group mt-2">
+                                                        <div class="col-4">
+                                                            <h6>FullName : </h6>
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <p>{{selected_user_name}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row icon-font form-group mt-2">
+                                                        <div class="col-4">
+                                                            <h6>Email : </h6>
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <p>{{selected_email}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row icon-font form-group mt-2">
+                                                        <div class="col-4">
+                                                            <h6>Phone : </h6>
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <p>{{selected_phone}}</p>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="row icon-font form-group mt-2">
+                                                        <div class="col-4">
+                                                            <h6>Company : </h6>
+                                                        </div>
+                                                        <div class="col-8" style="word-break: break-word;">
+                                                            <p>{{selected_company_name}}</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row icon-font form-group mt-2">
+                                                        <div class="col-4">
+                                                            <h6>Address : </h6>
+                                                        </div>
+                                                        <div class="col-8" style="word-break: break-word;">
+                                                            <p>{{selected_address}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                
+                                            </div>
+                                       
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+<!--                     
+                        <div id="frame">
+                            <div id="sidepanel">
+                                <div id="profile">
+                                    <div class="wrap">
+                                        <img id="profile-img" src="http://emilcarlsson.se/assets/mikeross.png" class="online" alt="" />
+                                        <p>Raja</p>
+                                        <i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div id="search">
+                                    <label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
+                                    <input type="text" placeholder="Search contacts..." />
+                                </div>
+                                <div id="contacts">
+                                    <ul>
+
+                                        <li class="contact" *ngFor="let qty of all_user;let i = index">
+                                            <div class="wrap">
+                                                <span class="contact-status online"></span>
+                                                <img src="http://emilcarlsson.se/assets/louislitt.png" alt="" />
+                                                <div class="meta">
+                                                    <p class="name">Louis Litt</p>
+                                                    <p class="preview">You just got LITT up, Mike.</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                            <div class="content">
+                                <div class="contact-profile">
+                                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                    <p>Harvey Specter</p>
+                                    <div class="social-media">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="messages">
+                            
+
+                                </div>
+                            </div>
+                        </div> -->
+
+           
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

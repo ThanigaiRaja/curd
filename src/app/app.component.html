@@ -1,0 +1,98 @@
+
+<div class="top">
+    <div id="menu-desktop">
+        <div class="topbar">
+            <div class="content-wrapper">
+                <div class="main-content">
+                    <!-- <div class="row p-2">
+
+                        <div class="col-3" style="text-align: left;margin-left: 25px;">
+                          </div>
+
+
+                        <div class="col-4  align_center" style="padding-top: 25px;" >
+                            <span class="text_style">Now you are a Admin</span><br>
+                        </div>
+
+                        <div class="col-4  align_center" style="padding-top: 6px;">
+                        </div>
+
+                        <div class="col-4 mt-1 ml-4" style="padding-top: 5px;left: 10%;">
+                            <div class="row justify-content-center font_style">
+                                <div class="col-1">
+                                </div>
+
+
+                                <div class="col-6">
+                                    <span class="text_style">{{timezone}}</span>
+                                </div>
+                            </div>
+                            <div class="row mt-2 justify-content-center font_style">
+                                <div class="col-1">
+                                </div>
+                                <div class="col-6">
+                                    <span class="time-right" style="color:#2f5fc9;" id="mytime"></span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <body class="sidebar-mini layout-fixed sidebar-collapse">
+            <div class="wrapper">
+                <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                    <a class="brand-link">
+                        <div style="width:70%;margin-top: 13px;">
+                            <img src="assets/images/user.png" alt="Logo" *ngIf="!logostatus"
+                                class="brand-image img-circle elevation-3" style="opacity: .8">
+                            <img src="{{logo}}" alt="Logo" *ngIf="logostatus" class="brand-image img-circle elevation-3"
+                                style="opacity: .8">
+                        </div>
+                        <div style="width:30%">
+                            <h5 style="color:white;margin-bottom: -3px;">Raja</h5>
+                            <span style="color:white;font-size: 14px;font-weight: 100;
+                            margin-left: 6px;">{{user_type_details}}</span>
+                        </div>
+                    </a>
+
+                    <div class="sidebar" style="overflow-y:auto;">
+                        <!-- Sidebar Menu -->
+                        <nav class="mt-2">
+                            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                                data-accordion="false">
+
+                                <li class="nav-item">
+                                    <a routerLink="/Rating-Questions" class="nav-link">
+                                        <img src="assets/images/dashboard_admin.png" class="nav-icon">
+                                        <p>Dashboard
+                                    </a>
+                                </li>
+
+                                <li class="nav-item has-treeview mt-2" style="cursor: pointer;">
+                                    <a (click)="logout()" class="nav-link">
+                                        <img src="assets/images/logout.png" class="nav-icon">
+                                        <p>Logout
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </aside>
+
+            </div>
+
+
+        </body>
+
+    </div>
+</div>
+
+
+<div>
+    <router-outlet></router-outlet>
+</div>

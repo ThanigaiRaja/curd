@@ -1,0 +1,395 @@
+
+/* media for login pages */
+
+/* @media only screen and  (width:360px){
+.sm-decoration{
+    padding-right:200px;
+    text-align:center;
+}
+} */
+
+
+
+
+/* media for buyer and seller */ 
+
+@media only screen and  (height: 768px)   {
+ 
+    .bg-image-background{
+      padding-top: 0px;
+    }
+    }
+    
+    @media only screen and  (height: 360px) {
+     
+      .bg-image-background{
+          padding-top: 0px;
+          height: 360px; 
+      }
+        }
+    
+    @media only screen and  (height: 320px) {
+     
+      .bg-image-background{
+          padding-top: 0px;
+          height: 320px; 
+      }
+        }
+    
+    @media only screen and  (height: 600px){
+     
+      .bg-image-background{
+          padding-top: 0px;
+          height: 600px; 
+      }
+        }
+    
+        @media only screen and  (height: 384px) {
+     
+          .bg-image-background{
+              padding-top: 0px;
+              height: 384px;
+          }
+            }
+    
+    
+            @media only screen and  (height: 240px) {
+     
+              .bg-image-background{
+                  padding-top: 0px;
+                  height: 240px;
+              }
+                }
+    
+                
+                @media only screen and  (height: 375px) {
+     
+                  .bg-image-background{
+                      padding-top: 0px;
+                      height: 375px;
+                  }
+                    }
+    
+    
+                    
+                @media only screen and  (height: 414px) {
+     
+                  .bg-image-background{
+                      padding-top: 0px;
+                      height: 414px;
+                  }
+                    }
+    
+    
+                @media only screen and  (height: 412px) {
+     
+                  .bg-image-background{
+                      padding-top: 0px;
+                      height: 412px;
+                  }
+                    }
+    
+                    @media only screen and  (height: 411px) {
+     
+                      .bg-image-background{
+                          padding-top: 0px;
+                          height: 411px;
+                      }
+                        }
+    
+                    @media only screen and  (height: 600px) {
+     
+                      .bg-image-background{
+                          padding-top: 0px;
+                          height: 412px;
+                      }
+                        }
+    
+                @media only screen and  (width: 240px) {
+     
+                  .bg-image-background{
+                      padding-top: 0px;
+                  }
+                    }
+    
+    
+                    
+                @media only screen and  (height: 480px) {
+     
+                  .bg-image-background{
+                      padding-top: 40%;
+    
+                  }
+                    }
+    
+    
+    
+    
+                    @media only screen and  (width: 768px) {
+     
+                      .bg-image-background{
+                          padding-top: 40%;
+                      }
+                        }
+    
+                        @media only screen and  (width: 1024px) and (height: 1366px) {
+     
+                          .bg-image-background{
+                              padding-top: 40%;
+                          }
+                            }
+    
+                            @media only screen and  (width: 854px) and (height: 480px) {
+     
+                              .bg-image-background{
+                                  padding-top: 0px;
+                                  height: 480px;
+                              }
+                                }
+                                  
+    @media only screen and  (width: 320px) and (height: 480px) {
+     
+      .bg-image-background{
+          padding-top: 30%;
+          height: 320px;
+         
+      }
+        }
+      
+    
+/* media for event-page only */
+
+@media only screen and  (height: 640px) {
+    html,body{
+      height:100%;
+      width:100%;
+    }
+}
+
+@media only screen and  (height: 640px) {
+    .card-event-page{
+        width:18rem;
+        margin-left:34px;
+    }
+}
+
+@media only screen and  (width:384px) {
+    .card-event-page{
+        margin-left:46px;
+    }
+}
+
+@media only screen and  (width:600px) {
+    .card-event-page{
+        width:22rem;
+        margin-left:120px;
+    }
+}
+
+@media only screen and  (width:800px) {
+    .card-event-page{
+        width:30rem;
+        margin-left:144px;
+    }
+}
+
+@media only screen and  (width:640px) {
+    .card-event-page{
+        width:26rem;
+        margin-left:120px;
+    }
+}
+
+@media only screen and  (width:360px) {
+    .card-event-page{
+        width:18rem;
+        margin-left:34px;   
+    }
+}
+
+@media only screen and  (width:412px){
+        .card-event-page{
+            width:20rem;
+            margin-left:44px;   
+        }          
+}
+
+@media only screen and  (width:320px){
+    .card-event-page{
+        width:16rem;
+        margin-left:32px;   
+    }          
+}
+
+@media only screen and  (width:480px){
+    .card-event-page{
+        width:22rem;
+        margin-left:60px;   
+    }          
+}
+
+@media only screen and  (width:411px){
+    .card-event-page{
+        width:20rem;
+        margin-left:48px;   
+    }          
+}
+
+@media only screen and  (width:375px){
+    .card-event-page{
+        width:18rem;
+        margin-left:46px;   
+    }          
+}
+
+@media only screen and  (width:414px){
+    .card-event-page{
+        width:20rem;
+        margin-left:46px;   
+    }          
+}
+
+@media only screen and  (width:768px){
+    .card-event-page{
+        width:40rem;
+        margin-left:56px;   
+    }          
+}
+
+@media only screen and  (width:1024px){
+    .card-event-page{
+        width:50rem;
+        margin-left:100px;   
+    } 
+    .text-align{
+        font-size:30px;
+    } 
+    .btn-white-event {
+        font-size:30px;
+    }
+    .btn-create  {
+        font-size:30px;
+    }   
+}
+/* media for create-event-page */
+
+@media only screen and  (width:600px){
+   .btn-white{
+    margin-top:10px;
+   }      
+}
+
+@media only screen and  (width:800px){
+    .btn-white{
+     margin-top:10px;
+    }      
+ }
+
+ @media only screen and  (width:640px){
+    .btn-white{
+     margin-top:10px;
+    }      
+ }
+
+ @media only screen and  (width:320px){
+    .btn-white{
+     margin-top:2px;
+     font-size:12px;
+    }  
+    .font-size{
+        font-size: 12px;
+    }
+    .wrap-word {
+        white-space: nowrap !important;
+      }
+      
+ }
+
+ @media only screen and  (width:768px){
+    .btn-white{
+     margin-top:12px;
+     font-size:14px;
+    } 
+    .font-size{
+        font-size: 20px;
+    }    
+ }
+
+ @media only screen and  (width:1024px){
+    .btn-white{
+     margin-top:12px;
+     font-size:18px;
+    } 
+    .font-size{
+        font-size: 24px;
+    }    
+ }
+
+ /* styles for fixed-sidebar */
+ @media only screen and  (max-width:1024px){
+    .sidebar-1{
+        display:none;
+    }
+    .bg-main{
+        display: block;
+    }
+ }
+
+ /* media for live events */
+
+ @media only screen and  (height:640px){
+    /* .live-events:after{
+        border-bottom: 3px solid #f4f6f9;
+        width:80px;
+        margin-top: 3px;
+        margin-left:40px;
+       } */
+       .live-btn{
+        width:60px;
+        background-color:#ff3051;
+        color:white;
+        font-size:18px;
+        font-family: Arial, Helvetica, sans-serif;
+        /* margin-top:10px; */
+        padding:1px;
+      }
+      .auction-collapsed-info
+{
+  /* width: 12% !important; */
+  /* word-break: break-all !important; */
+  color:white;
+}
+.profile-info-view {
+  margin-top: 10px;
+}
+.auction-report-title {
+  /* width: 100%; */
+  /* background-color:#080b63; */
+  display: inline-block;
+}
+.auction-report-title>.auction-collapsed-info {
+  border-right: 1px solid #61615f;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.auction-collapsed-info {
+  width: 12%;
+  float: left;
+  margin: 0px 1px;
+  text-align: center;
+}
+ }
+
+
+
+ @media only screen and  (max-width:1024px){
+    #content {
+        margin-top: 26px;
+        z-index: 0;
+        /* position: absolute; */
+        /* width:100%; */
+      }
+ }

@@ -1,0 +1,77 @@
+.field-icon {
+    float: right;
+    margin-top: -27px;
+    position: relative;
+    z-index: 2;
+    margin-right: 12px;
+  }
+  .bg {
+    /* The image used */
+    /* background-image: url('../../assets/images/pq-ratinglogin.png'); */
+    min-height: 380px;
+   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  }
+  
+  /* body, html {
+    height: 100%;
+  } */
+  /*   
+  * {
+    box-sizing: border-box;
+  } */
+  
+  
+  /* Add styles to the form container */
+  .container {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    max-width: 385px;
+    padding: 16px;
+    left: 33%;
+   
+  }
+  
+  .input-container {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  .icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+  }
+  
+  .log_text{
+    font-size: 23px;
+    text-align: left;
+    font-weight: 500;
+    margin-left: 30px;
+  }
+  
+  
+  .btn-login{
+    font-size: 13px;
+    line-height: 14px;
+    width: 90px;
+    background-color: #2f5fc9;
+    color: white;
+    text-align: center;
+    margin-left: 34px;
+  
+  }
+  
+  .btn-login:hover
+  {
+    box-shadow: 1px 2px 3px rgb(4 4 4 / 32%);
+  }
+  
+  .pointer{
+    cursor: pointer;
+  }
